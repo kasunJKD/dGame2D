@@ -1,0 +1,21 @@
+[submodule "vendors/bindbc-sdl"]
+	path = vendors/bindbc-sdl
+	url = https://github.com/BindBC/bindbc-sdl.git
+[submodule "vendors/bindbc-common"]
+	path = vendors/bindbc-common
+	url = https://github.com/BindBC/bindbc-common.git
+[submodule "vendors/bindbc-loader"]
+	path = vendors/bindbc-loader
+	url = https://github.com/BindBC/bindbc-loader.git
+[submodule "vendors/bindbc-opengl"]
+	path = vendors/bindbc-opengl
+	url = https://github.com/BindBC/bindbc-opengl.git
+[submodule "vendors/bindbc-imgui"]
+	path = vendors/bindbc-imgui
+	url = https://github.com/BindBC/bindbc-imgui.git
+[submodule "vendors/cpp/imgui"]
+	path = vendors/cpp/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "vendors/imgui"]
+	path = vendors/imgui
+	url = https://github.com/cimgui/cimgui.git
