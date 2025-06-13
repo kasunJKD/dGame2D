@@ -6,6 +6,12 @@ module defines;
     Math related stuff
     -------------------
 */
+
+struct vec2 {
+    float x;
+    float y;
+};
+
 struct vec3 {
     float x;
     float y;

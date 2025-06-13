@@ -19,3 +19,6 @@
 [submodule "vendors/imgui"]
 	path = vendors/imgui
 	url = https://github.com/cimgui/cimgui.git
+[submodule "vendors/bindbc-nuklear"]
+	path = vendors/bindbc-nuklear
+	url = https://github.com/Timu5/bindbc-nuklear.git

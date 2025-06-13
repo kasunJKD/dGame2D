@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\build",
+    "\\build\\debug",
     "\\src"
   ],
-  "SelectedNode": "\\src\\main.d",
+  "SelectedNode": "\\build\\debug\\game.exe",
   "PreviewInSolutionExplorer": false
 }

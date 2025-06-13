@@ -64,7 +64,7 @@ bool pollWindowEvents(Window* win,out bool keyTab, out bool quit)
     {
 
         switch (e.type)
-        {
+        { 
             case SDL_EVENT_QUIT:
                 quit = true;
                 return false;

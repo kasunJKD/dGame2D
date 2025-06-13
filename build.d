@@ -13,41 +13,29 @@ enum string bindbcSdlDir   = "vendors/bindbc-sdl/source";
 enum string bindbcCommonDir= "vendors/bindbc-common/source";
 enum string bindbcLoaderDir= "vendors/bindbc-loader/source";
 enum string bindbcOpenGLDir= "vendors/bindbc-opengl/source";
-enum string cimguiDir = "vendors/cimgui";
 
-enum string cimguiCpp = cimguiDir ~ "/cimgui.cpp";
-enum string cimguiObj = "build/debug/cimgui.obj";
-
-string[] imguiCpps = [
-    "imgui.cpp",
-    "imgui_draw.cpp",
-    "imgui_widgets.cpp",
-    "imgui_tables.cpp",
-    "imgui_demo.cpp"
-];
-
-string[] compileImGuiObjs()
-{
-    string[] objs;
-    foreach (file; imguiCpps)
-    {
-        string fullPath = cimguiDir ~ "/imgui/" ~ file;
-        string objFile = "build/debug/" ~ file.replace(".cpp", ".obj");
-        objs ~= objFile;
-
-        if (!exists(objFile))
-        {
-            writeln(">> Compiling ImGui: ", file);
-            auto res = executeShell("clang++ -m64 -std=c++17 -Ivendors/cimgui/imgui -c " ~ fullPath ~ " -o " ~ objFile);
-            if (res.status != 0)
-            {
-                writeln("‼ Failed to compile ", file);
-                write(res.output);
-            }
-        }
-    }
-    return objs;
-}
+/* string[] compileImGuiObjs() */
+/* { */
+/*     string[] objs; */
+/*     foreach (file; imguiCpps) */
+/*     { */
+/*         string fullPath = cimguiDir ~ "/imgui/" ~ file; */
+/*         string objFile = "build/debug/" ~ file.replace(".cpp", ".obj"); */
+/*         objs ~= objFile; */
+/**/
+/*         if (!exists(objFile)) */
+/*         { */
+/*             writeln(">> Compiling ImGui: ", file); */
+/*             auto res = executeShell("clang++ -m64 -std=c++17 -Ivendors/cimgui/imgui -c " ~ fullPath ~ " -o " ~ objFile); */
+/*             if (res.status != 0) */
+/*             { */
+/*                 writeln("‼ Failed to compile ", file); */
+/*                 write(res.output); */
+/*             } */
+/*         } */
+/*     } */
+/*     return objs; */
+/* } */
 
 void main(string[] args)
 {
@@ -66,22 +54,6 @@ void main(string[] args)
         writeln(">> Creating directory `", outputDir, "` …");
         mkdirRecurse(outputDir);
     }
-
-    // Compile cimgui.cpp
-    if (!exists(cimguiObj))
-    {
-        writeln(">> Compiling C++ backend: ", cimguiCpp);
-        auto res = executeShell("clang++ -m64 -std=c++17 -Ivendors/cimgui/imgui -c " ~ cimguiCpp ~ " -o " ~ cimguiObj);
-        if (res.status != 0)
-        {
-            writeln("‼ Failed to compile cimgui.cpp");
-            write(res.output);
-            return;
-        }
-    }
-
-    // Compile core ImGui files
-    auto imguiObjs = compileImGuiObjs();
 
     // Collect D sources
     string[] sources;
@@ -102,20 +74,16 @@ void main(string[] args)
         "-m64",
         "-version=SDL_3_2_4",
         "-version=GL_46",
+        "-version=Debug",
         mode == "debug" ? "-g" : "-release",
         "-I" ~ sourceDir,
         "-I" ~ bindbcSdlDir,
         "-I" ~ bindbcCommonDir,
         "-I" ~ bindbcLoaderDir,
         "-I" ~ bindbcOpenGLDir,
-        "-I" ~ cimguiDir,
         "-L/LIBPATH:vendors/sdl3/lib",
         "-LSDL3.lib",
-        "-L" ~ cimguiObj
     ];
-
-    foreach (imguiObj; imguiObjs)
-        compileCmd ~= "-L" ~ imguiObj;
 
     if (mode == "release")
         compileCmd ~= ["-O", "-inline"];
