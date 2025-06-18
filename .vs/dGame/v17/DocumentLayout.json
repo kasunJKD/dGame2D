@@ -3,12 +3,19 @@
   "WorkspaceRootPath": "D:\\Personal\\dGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\main.d||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.d||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\dmd2\\src\\phobos\\std\\exception.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\window.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
@@ -27,19 +34,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "font.d",
+              "DocumentMoniker": "D:\\Personal\\dGame\\src\\font.d",
+              "RelativeDocumentMoniker": "src\\font.d",
+              "ToolTip": "D:\\Personal\\dGame\\src\\font.d",
+              "RelativeToolTip": "src\\font.d",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAvwG0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-18T18:27:53.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "exception.d",
+              "DocumentMoniker": "C:\\D\\dmd2\\src\\phobos\\std\\exception.d",
+              "ToolTip": "C:\\D\\dmd2\\src\\phobos\\std\\exception.d",
+              "ViewState": "AQIAAPQBAAAAAAAAAAAvwAgCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-18T18:25:42.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "editor.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\editor.d",
               "RelativeDocumentMoniker": "src\\editor.d",
               "ToolTip": "D:\\Personal\\dGame\\src\\editor.d",
               "RelativeToolTip": "src\\editor.d",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwB4AAAAZAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAiwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-08T09:49:07.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "window.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\window.d",
               "RelativeDocumentMoniker": "src\\window.d",
@@ -57,7 +88,7 @@
               "RelativeDocumentMoniker": "src\\main.d",
               "ToolTip": "D:\\Personal\\dGame\\src\\main.d",
               "RelativeToolTip": "src\\main.d",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAjwHwAAAALAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAvwGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-05T16:50:26.829Z",
               "EditorCaption": ""

@@ -133,7 +133,7 @@ struct Mgui {
         
         int winW, winH;
         SDL_GetWindowSize(SDL_GL_GetCurrentWindow(), &winW, &winH);
-glViewport(0, 0, winW, winH);
+        glViewport(0, 0, winW, winH);
 
         float l = 0, r = cast(float)winW;
         float t = 0, b = cast(float)winH;

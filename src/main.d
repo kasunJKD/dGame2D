@@ -4,6 +4,9 @@ import bindbc.opengl;
 import std.stdio : writeln;
 import window;
 import editor;
+import bindbc.freetype;
+import font;
+import defines;
 
 version (Debug)
 {
@@ -28,12 +31,15 @@ void main()
         return;
     }
 
-    Window win = createWindow("My SDL3 Window", 800, 600);
-
-    Mgui ui;
-
+    
+    Window win = createWindow("dGame", 800, 600);
     GLSupport retVal = loadOpenGL();
     
+    //managers and systems init
+    Mgui ui;
+    fontManager.init();                                    // sets up FreeType + VAO/VBO
+    fontManager.loadFont("default", "assets/Roboto.ttf", 32);
+ 
     Mode currentMode;
     static if (isDebugBuild)
     {
@@ -99,11 +105,15 @@ void main()
                         writeln("Clicked Button 1");
                     }
 
+
                     if (ui.gui_button(2, 50, 100, 150, 40)) {
                         writeln("Clicked Button 2");
                     }
 
                     ui.end();
+
+                    enum pos = vec2(50, 100);           // screen-space pixel coords
+                    ui_draw_text("Editor Mode", pos);
                 // ── UI End ──
             }
             else
