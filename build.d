@@ -13,6 +13,7 @@ enum string bindbcSdlDir   = "vendors/bindbc-sdl/source";
 enum string bindbcCommonDir= "vendors/bindbc-common/source";
 enum string bindbcLoaderDir= "vendors/bindbc-loader/source";
 enum string bindbcOpenGLDir= "vendors/bindbc-opengl/source";
+enum string bindbcFreeTypeDir= "vendors/bindbc-freetype/source";
 
 /* string[] compileImGuiObjs() */
 /* { */
@@ -74,6 +75,7 @@ void main(string[] args)
         "-m64",
         "-version=SDL_3_2_4",
         "-version=GL_46",
+        "-version=FT_2_13",
         "-version=Debug",
         mode == "debug" ? "-g" : "-release",
         "-I" ~ sourceDir,
@@ -81,8 +83,11 @@ void main(string[] args)
         "-I" ~ bindbcCommonDir,
         "-I" ~ bindbcLoaderDir,
         "-I" ~ bindbcOpenGLDir,
+        "-I" ~ bindbcFreeTypeDir,
         "-L/LIBPATH:vendors/sdl3/lib",
         "-LSDL3.lib",
+        "-L/LIBPATH:vendors/bindbc-freetype/freetype",
+        "-Lfreetype.lib"
     ];
 
     if (mode == "release")

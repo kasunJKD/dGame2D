@@ -68,6 +68,10 @@ bool pollWindowEvents(Window* win,out bool keyTab, out bool quit)
             case SDL_EVENT_QUIT:
                 quit = true;
                 return false;
+        case SDL_EVENT_WINDOW_RESIZED:
+                win.width  = e.window.data1;
+                win.height = e.window.data2;
+            break;
 
             /* case SDL_MOUSEBUTTONDOWN: */
             /*     if (e.button.button == SDL_BUTTON_LEFT) */

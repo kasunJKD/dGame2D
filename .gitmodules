@@ -22,3 +22,6 @@
 [submodule "vendors/bindbc-nuklear"]
 	path = vendors/bindbc-nuklear
 	url = https://github.com/Timu5/bindbc-nuklear.git
+[submodule "vendors/bindbc-freetype"]
+	path = vendors/bindbc-freetype
+	url = https://github.com/BindBC/bindbc-freetype.git
