@@ -77,6 +77,7 @@ void main(string[] args)
         "-version=GL_46",
         "-version=FT_2_13",
         "-version=Debug",
+        "-version=SDL_TTF_3_2",
         mode == "debug" ? "-g" : "-release",
         "-I" ~ sourceDir,
         "-I" ~ bindbcSdlDir,
@@ -132,7 +133,8 @@ void main(string[] args)
     {
         auto runRes = execute([outputBin]);
         writeln("--- Program output (stdout+stderr) ---");
-        write(runRes.output);
+        write(runRes.output); 
+        stdout.flush();
         writeln("--- End program output ---");
         if (runRes.status != 0)
             writeln("‼ Program exited with code ", runRes.status);

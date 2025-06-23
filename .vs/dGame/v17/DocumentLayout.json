@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Personal\\dGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\main.d||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.d||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\window.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\window.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\font.d||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\dmd2\\src\\phobos\\std\\exception.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
@@ -16,10 +20,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\editor.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\dGame\\src\\window.d||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\window.d||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,35 +29,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "font.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\font.d",
               "RelativeDocumentMoniker": "src\\font.d",
               "ToolTip": "D:\\Personal\\dGame\\src\\font.d",
               "RelativeToolTip": "src\\font.d",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAvwG0AAAAMAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAvwHkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-18T18:27:53.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "exception.d",
               "DocumentMoniker": "C:\\D\\dmd2\\src\\phobos\\std\\exception.d",
               "ToolTip": "C:\\D\\dmd2\\src\\phobos\\std\\exception.d",
               "ViewState": "AQIAAPQBAAAAAAAAAAAvwAgCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-18T18:25:42.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T18:25:42.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "editor.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\editor.d",
               "RelativeDocumentMoniker": "src\\editor.d",
@@ -65,30 +64,30 @@
               "RelativeToolTip": "src\\editor.d",
               "ViewState": "AQIAAAMAAAAAAAAAAAAiwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-08T09:49:07.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T09:49:07.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "window.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\window.d",
               "RelativeDocumentMoniker": "src\\window.d",
               "ToolTip": "D:\\Personal\\dGame\\src\\window.d",
               "RelativeToolTip": "src\\window.d",
-              "ViewState": "AQIAACEAAAAAAAAAAAAjwCcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-05T16:51:19.814Z"
+              "WhenOpened": "2025-06-05T16:51:19.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.d",
               "DocumentMoniker": "D:\\Personal\\dGame\\src\\main.d",
               "RelativeDocumentMoniker": "src\\main.d",
               "ToolTip": "D:\\Personal\\dGame\\src\\main.d",
               "RelativeToolTip": "src\\main.d",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAvwGgAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAADEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-05T16:50:26.829Z",
               "EditorCaption": ""
