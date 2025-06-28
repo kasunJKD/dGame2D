@@ -5,6 +5,7 @@ import std.stdio;
 import std.exception;
 import std.string;
 import core.stdc.stdlib;
+import std.utf;
 
 /// Simple wrapper holding an SDL window + accelerated renderer
 public struct Window
@@ -54,7 +55,7 @@ Window createWindow(const(char)* title, int w, int h)
     return win;
 }
 
-bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, string *text)
+bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, ref string text)
 {
     keyTab = quit = false;
 
@@ -81,12 +82,22 @@ bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, string *text)
                     case SDLK_ESCAPE:
                         quit = true;
                         return false;
+                    case SDLK_BACKSPACE:
+                        if (!text.empty)                       // nothing to remove?
+                        {
+                            auto n = strideBack(text, text.length);
+                            text = text[0 .. text.length - n];
+                        }
+                        break;
+                    case SDLK_RETURN:
+                        text ~= '\n';  
+                        break;
                     default:
                         break;
                 }
                 break;
-        case SDL_EVENT_TEXT_INPUT:
-                *text ~= e.text.text[0 .. SDL_strlen(e.text.text)].idup;
+            case SDL_EVENT_TEXT_INPUT:
+                text ~= e.text.text[0 .. SDL_strlen(e.text.text)].idup;
                 break;
 
             default:
