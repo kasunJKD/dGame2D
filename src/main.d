@@ -1,3 +1,9 @@
+//TODO
+//read file
+//mappers
+//movement of cuourser
+//special windows
+
 import bindbc.loader;  
 import bindbc.sdl;
 import bindbc.opengl;
@@ -10,7 +16,22 @@ import defines;
 immutable float LEFT_BAR_WIDTH   = 20.0f;   // px
 immutable float BOTTOM_BAR_HEIGHT = 30.0f;   // px
 immutable float MARGIN            = 10.0f;   // padding inside bars
-float FONT_SIZE = 24.0f;
+immutable float FONT_SIZE = 24.0f;
+immutable int TAB_SPACE_AMOUNT = 4;
+
+enum ActionType {
+    OPEN_FUZZY
+}
+
+struct CommandBind {
+    SDL_KeyMod leader_key; //might or might not exists
+    SDL_KeyMod keymod; //ctrl, alt, shift
+    SDL_KeyCode key;
+    string description;
+};
+
+ActionType[CommandBind] commandMapper;
+
 
 void fillRect(SDL_Renderer* r, ubyte red, ubyte green, ubyte blue, ubyte alpha,
               in SDL_FRect rect)
@@ -154,7 +175,7 @@ void main()
             lastBlink    = now;
         }
         bool tab, quit;
-        if (!pollWindowEvents(&win, tab, quit, inputtext) || quit)
+        if (!pollWindowEvents(&win, tab, quit, inputtext, TAB_SPACE_AMOUNT) || quit)
             break;
 
         /* Clear and draw scene here */
@@ -239,7 +260,7 @@ void main()
             caretX = textArea.x + textArea.w - 1;
 
         /* build a 2-px-wide caret rect */
-        SDL_FRect caret = { caretX, caretY, 2, cast(float)glyphH };
+        SDL_FRect caret = { caretX, caretY, 10, cast(float)glyphH };
 
     /* ---------- draw caret if visible ---------- */
         if (caretVisible)

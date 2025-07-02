@@ -6,6 +6,7 @@ import std.exception;
 import std.string;
 import core.stdc.stdlib;
 import std.utf;
+import std.array;
 
 /// Simple wrapper holding an SDL window + accelerated renderer
 public struct Window
@@ -55,7 +56,7 @@ Window createWindow(const(char)* title, int w, int h)
     return win;
 }
 
-bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, ref string text)
+bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, ref string text, int tab_space_amount)
 {
     keyTab = quit = false;
 
@@ -78,6 +79,7 @@ bool pollWindowEvents(Window* win, out bool keyTab, out bool quit, ref string te
                 {
                     case SDLK_TAB:
                         keyTab = true;
+                        text ~= replicate(" " , tab_space_amount);
                         break;
                     case SDLK_ESCAPE:
                         quit = true;
